@@ -28,7 +28,21 @@ const BunnysIndex = (props) => {
 				console.log('use Effect hook ran')
 				setBunnys(res.data.bunnys)
 			})
-			.catch(error => console.error)
+      .then(() => {
+        msgAlert({
+          heading: 'Success!',
+          message: 'Got all the bunnys!',
+          variant: 'success'
+        })
+      })
+			.catch(error =>{
+        msgAlert({
+          heading: 'Oh no!',
+          message: 'Something went wrong!',
+          variant: 'danger'
+        })
+        setError(true)
+      })
 	}, [])
 	console.log('the bunnys in BunnysIndex: \n', bunnys)
 

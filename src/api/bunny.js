@@ -8,6 +8,10 @@ export const getAllBunnys = () => {
 }
 
 // READ -> show
+export const getOneBunny = (id) => {
+  return axios(`${apiUrl}/bunnys/${id}`)
+}
+
 // CAREATE -> to add a bennyu
 // UPDATE -> adjust a bunny
 // DELETE -> set a bunny FREE
