@@ -1,9 +1,7 @@
-import {useState, useEffect} from 'react'
-import { getAllBunnys } from "../api/bunny"
 import  BunnysIndex from './bunnys/BunnysIndex'
 
 const Home = (props) => {
-	const { msgAlert, user } = props
+	const { msgAlert} = props
 	// console.log('props in home', props)
 
 	// const [bunnys, setBunnys] = useState(null)
