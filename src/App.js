@@ -30,7 +30,7 @@ const App = () => {
 			// then set that saved user in state
 			setUser(foundUser)
 		}
-	})
+	},[])
 
   console.log('user in app', user)
   console.log('message alerts', msgAlerts)

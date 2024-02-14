@@ -6,6 +6,17 @@ const messages = {
 	signOutSuccess: 'Come back soon!',
 	changePasswordSuccess: 'Password changed successfully!',
 	changePasswordFailure:'Failed to change passwords. Check your old password and try again.',
+	// create bunny success
+	createBunnySuccess: 'Created the bunny!',
+	// update bunny success
+	updateBunnySuccess: 'Updated the bunny!',
+	// delete bunny success
+	deleteBunnySuccess: 'We set the bunny free!',
+	createSnackSuccess: 'Congrats! The bunny loves their new snack!',
+	updateSnackSuccess: 'Updated the snack!',
+	deleteSnackSuccess: 'Removed the snack!',
+	// general error
+	generalError: 'Something went wrong... Try Again'
 }
 
 module.exports = messages
