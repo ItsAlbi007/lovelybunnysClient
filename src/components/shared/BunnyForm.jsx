@@ -47,6 +47,14 @@ const BunnyForm = (props) => {
         </Form.Group>
         <Form.Group className='m-2'>
           <Form.Check
+            label="Do you want to include a picture"
+            name="thumbnail"
+            // defaultChecked={bunny.forsale}
+            onChange={handleChange}
+          />
+        </Form.Group>
+        <Form.Group className='m-2'>
+          <Form.Check
             label="Is this Bunny forsale"
             name="forsale"
             // defaultChecked={bunny.forsale}

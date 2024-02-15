@@ -7,17 +7,18 @@ import messages  from '../shared/AutoDismissAlert/messages'
 
 const BunnyCreate = (props) => {
   // pull out our props
-  const { user, msgAlert} = props
-  const navigate = useNavigate()
+const { user, msgAlert} = props
+const navigate = useNavigate()
   // build our state object
-  const [bunny, setBunny] = useState({
+const [bunny, setBunny] = useState({
     name: '',
     type: '',
     age: '',
+    thumbnail:'',
     forsale: false
-  })
+})
 
-  const onChange = (e) => {
+const onChange = (e) => {
     // e is the placeholder for the event
     // e.persist is bc react uses the virtual dom, we want our form data to persist every time the page renders. Which will be a lot of times.
     e.persist()
@@ -40,6 +41,13 @@ const BunnyCreate = (props) => {
             updatedValue = true
         } else if (updatedName === 'forsale' && !e.target.checked) {
             updatedValue = false
+        }
+        if (updatedName === 'thumbnail' && e.target.checked) {
+            
+        const randomNumber = Math.floor(Math.random() * (100 - 1 + 1) + 1)
+            updatedValue = `https://bunnies.media/poster/${randomNumber}.png`
+        } else if (updatedName === 'thumbnail' && !e.target.checked) {
+            updatedValue = ""
         }
 
         // this will actually buiild our bunny object
@@ -75,13 +83,13 @@ const onSubmit = (e) => {
 }
 console.log('the bunny inside create', bunny)
 return (
-  <BunnyForm
+<BunnyForm
     bunny={bunny}
     handleChange={onChange}
     handleSubmit={onSubmit}
     heading="Add a new bunny"
     />
-  )
+)
 }
 
 export default BunnyCreate

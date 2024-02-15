@@ -72,7 +72,7 @@ const BunnyShow = (props) => {
    // if we have a bunny, and if their snacks array length > 0, make cards, otherwise dont
   if (bunny) {
       if (bunny.snack.length > 0) {
-          snackCards = bunny.snacks.map(snack => (
+          snackCards = bunny.snack.map(snack => (
               <SnackShow 
                   key={snack.id}
                   snack={snack}
@@ -100,22 +100,29 @@ const BunnyShow = (props) => {
             {bunny.fullTitle}
           </Card.Header>
           <Card.Body>
+          { bunny.thumbnail ? <Card.Img src = {bunny.thumbnail} alt={`${bunny.name} thumbnail`} />
+          :
+          null
+          }
             <Card.Text>
               <small>Age: {bunny.age}</small><br />
-              <small>Type: {bunny.Type}</small><br />
+              <small>Type: {bunny.type}</small><br />
               <small>
                 Forsale? {bunny.forsale ? 'yes' : 'no'}
               </small>
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-          <Button
+          {user ? <Button
                 className='m-2'
                 variant='info'
                 onClick={() => setSnackModalShow(true)}
             >
                 Give {bunny.name} a snack!
             </Button>
+            :
+            null
+            }
             {
                 bunny.owner && user && bunny._id === user._id
                 ?

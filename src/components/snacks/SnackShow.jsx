@@ -51,10 +51,9 @@ const SnackShow = (props) => {
     return (
         <>
             <Card className='m-2' style={setBgCondition(snack.condition)}>
-            <Card.Header>{snack.name}</Card.Header>
+            <Card.Header>name: {snack.name}</Card.Header>
             <Card.Body>
-            <small>{snack.description}</small><br/>
-            <small>{snack.isSqueaky ? 'squeak squeak' : 'stoic silence'}</small>
+            <small>description: {snack.description}</small><br/>
             </Card.Body>
             <Card.Footer>
             <small>Condition: {snack.condition}</small><br/>

@@ -63,7 +63,7 @@ const EditSnackModal = (props) => {
 
     return (
         <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton />
+        <Modal.Header closeButton />
             <Modal.Body>
                 <SnackForm 
                     snack={snack}

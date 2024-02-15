@@ -73,7 +73,13 @@ const BunnysIndex = (props) => {
     const bunnyCards = bunnys.map(bunny => (
         <Card key={bunny.id} style={{ width: '30%', margin: 5 }} >
             <Card.Header>{bunny.fullTitle}</Card.Header>
+            
             <Card.Body>
+            { bunny.thumbnail ? 
+                    <img src = {bunny.thumbnail} alt={`${bunny.name} thumbnail`} width = {200} height = {200} style = {{objectFit: 'cover', marginBottom: '10px' }}  />
+                    :
+                    null
+                }
                 <Card.Text>
                     <Link to={`/bunnys/${bunny.id}`} className='btn btn-info'>
                         View {bunny.name}
@@ -94,6 +100,5 @@ const BunnysIndex = (props) => {
         </div>
     )
 }
-
 
 export default BunnysIndex
