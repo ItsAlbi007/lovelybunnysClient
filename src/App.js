@@ -16,6 +16,7 @@ import ChangePassword from './components/auth/ChangePassword'
 import BunnyShow from './components/bunnys/BunnyShow'
 import AvailableBunnys from './components/bunnys/AvailableBunnys'
 import BunnyCreate from './components/bunnys/BunnyCreate'
+import ContactUs from './components/ContackUs'
 
 const App = () => {
 
@@ -66,6 +67,7 @@ const App = () => {
 				<Routes>
 					<Route path='/' element={<Home msgAlert={msgAlert} user={user} />} />
 					<Route path='/about' element={<AboutUs msgAlert={msgAlert} user={user} />} />
+					<Route path='/contact' element={<ContactUs msgAlert={msgAlert} user={user} />} />
 					<Route path='/available' element={<AvailableBunnys msgAlert={msgAlert} user={user} />} />
 					<Route
 						path='/sign-up'

@@ -96,9 +96,14 @@ const BunnysIndex = (props) => {
 
     return (
         <div className="container-md" style={ cardContainerLayout }>
-            { bunnyCards }
+            <div className='d-flex'>{ bunnyCards }</div>
+
+            <div>
+                <p>Lovely Bunny's is a Rabbitry that breeds indoor specialty Holland Lop Bunnies. This particular breed of bunny were created to be pet bunnies, and should be treated that way. Ironically, fully grown, they are smaller than Mini Lop Bunnies, in which full grown Holland Lop Bunnies are between 2-4 pounds, while full grown Mini Lops range between 3-6 pounds. They were born and bred indoors, and will continue to remain indoor bunnies throughout the duration of their lives.</p>
+                <p>We like to present these animals in a way that they are just as loving, caring, and smart as any other traditional pet. The are very docile and human friendly by nature, and with our guidance prior to, and following a bunny  going to their forever home, the result is always an amazing experience, and a team that is there to support you every step of the way.</p>
+            </div>
         </div>
-    )
+    ) 
 }
 
 export default BunnysIndex

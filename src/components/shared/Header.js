@@ -49,11 +49,16 @@ const alwaysOptions = (
 				About Us
 			</Link>
 		</Nav.Item>
+		<Nav.Item className='m-2'>
+			<Link to='/contact' style={linkStyle}>
+				Contact Us
+			</Link>
+		</Nav.Item>
 	</>
 )
 
 const Header = ({ user }) => (
-	<Navbar bg='primary' variant='dark' expand='md'  className='justify-content-between' >
+	<Navbar  expand='md'  className='justify-content-between' style={{ backgroundColor:'#343a40'}}>
 		<Navbar.Brand className='m-2 flex-fill'>
             <Link to='/' style={linkStyle}>
                 Lovely Bunnys
