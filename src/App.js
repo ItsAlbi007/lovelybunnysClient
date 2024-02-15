@@ -8,11 +8,13 @@ import AutoDismissAlert from './components/shared/AutoDismissAlert/AutoDismissAl
 import Header from './components/shared/Header'
 import RequireAuth from './components/shared/RequireAuth'
 import Home from './components/Home'
+import AboutUs from './components/AboutUs'
 import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import BunnyShow from './components/bunnys/BunnyShow'
+import AvailableBunnys from './components/bunnys/AvailableBunnys'
 import BunnyCreate from './components/bunnys/BunnyCreate'
 
 const App = () => {
@@ -63,6 +65,8 @@ const App = () => {
 				<Header user={user} />
 				<Routes>
 					<Route path='/' element={<Home msgAlert={msgAlert} user={user} />} />
+					<Route path='/about' element={<AboutUs msgAlert={msgAlert} user={user} />} />
+					<Route path='/available' element={<AvailableBunnys msgAlert={msgAlert} user={user} />} />
 					<Route
 						path='/sign-up'
 						element={<SignUp msgAlert={msgAlert} setUser={setUser} />}

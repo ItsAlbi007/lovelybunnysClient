@@ -7,6 +7,10 @@ export const getAllBunnys = () => {
   return axios(`${apiUrl}/bunnys`)
 }
 
+export const getThreeBunnys = () => {
+  return axios(`${apiUrl}/threeBunnys`)
+}
+
 // READ -> show
 export const getOneBunny = (id) => {
   return axios(`${apiUrl}/bunnys/${id}`)

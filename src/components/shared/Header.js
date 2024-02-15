@@ -40,16 +40,21 @@ const unauthenticatedOptions = (
 const alwaysOptions = (
 	<>
 		<Nav.Item className='m-2'>
-			<Link to='/' style={linkStyle}>
-				Home
+			<Link to='/available' style={linkStyle}>
+				Available Bunnys
+			</Link>
+		</Nav.Item>
+		<Nav.Item className='m-2'>
+			<Link to='/about' style={linkStyle}>
+				About Us
 			</Link>
 		</Nav.Item>
 	</>
 )
 
 const Header = ({ user }) => (
-	<Navbar bg='primary' variant='dark' expand='md'>
-		<Navbar.Brand className='m-2'>
+	<Navbar bg='primary' variant='dark' expand='md'  className='justify-content-between' >
+		<Navbar.Brand className='m-2 flex-fill'>
             <Link to='/' style={linkStyle}>
                 Lovely Bunnys
             </Link>

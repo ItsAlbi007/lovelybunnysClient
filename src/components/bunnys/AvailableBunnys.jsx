@@ -1,7 +1,7 @@
 // this component is going to take functionality away from Home.js, and focus only on displaying a list of bunnys gathered from the database, via an API call
 // used for updating state with api data
 import {useState, useEffect} from 'react'
-import { getThreeBunnys } from "../../api/bunny"
+import { getAllBunnys } from "../../api/bunny"
 // used for rendering things
 import LoadingScreen from '../shared/LoadingScreen'
 import { Card } from 'react-bootstrap'
@@ -15,7 +15,7 @@ const cardContainerLayout = {
     justifyContent: 'center'
 }
 
-const BunnysIndex = (props) => {
+const AvailableBunnys = (props) => {
     // first we want two pieces of state to use for rendering
     const [bunnys, setBunnys] = useState(null)
     const [error, setError] = useState(false)
@@ -29,7 +29,7 @@ const BunnysIndex = (props) => {
 	// the dependency array, tells react when to run the effect hook. If we want this to run only on the first render and anytime the page refreshes, we keep the dependency array empty
 	// useEffect is called RIGHT after the FIRST render of the component
 	useEffect(() => {
-		getThreeBunnys()
+		getAllBunnys()
 			// .then(res => console.log('bunnys from axios call: \n', res.data.bunnys))
 			.then(res => {
 				console.log('use Effect hook ran')
@@ -95,10 +95,11 @@ const BunnysIndex = (props) => {
     ))
 
     return (
-        <div className="container-md" style={ cardContainerLayout }>
+        <div className="container-md " style={ cardContainerLayout }>
+            {/* <h2>Available Bunnys</h2> */}
             { bunnyCards }
         </div>
     )
 }
 
-export default BunnysIndex
+export default AvailableBunnys
